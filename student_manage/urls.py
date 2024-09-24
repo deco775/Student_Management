@@ -2,6 +2,7 @@
 from django.urls import path
 from . import views
 
+#/* Creating urls or path for student database */
 urlpatterns = [
     path("",views.show,name="show"),
     path("add/",views.adddata,name="add"),
