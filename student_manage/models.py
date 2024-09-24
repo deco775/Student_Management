@@ -9,7 +9,7 @@ MY_CHOICES = [
         ("IT", 'IT'),
     ]
 
-/*creating a model for student inf0*/
+ # This model stores information about students enrolled in the system.
 class Student(models.Model):
     fname=models.CharField(max_length=25)
     lname=models.CharField(max_length=25)
