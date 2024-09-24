@@ -1,6 +1,6 @@
 from django.db import models
 
-/*This are courses that students are enrolled*/
+#/*This are courses that students are enrolled*/
 MY_CHOICES = [
         ("CE", 'CE'),
         ("EXTC", 'EXTC'),
@@ -17,6 +17,6 @@ class Student(models.Model):
     phone=models.PositiveIntegerField()
     branch=models.CharField(max_length=50,choices=MY_CHOICES)
         
-/* defining the string function for our model*/
+#/* defining the string function for our model*/
     def __str__(self):
         return self.fname
