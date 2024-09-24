@@ -3,13 +3,13 @@ from .models import Student, MY_CHOICES
 from .forms import StudentRegistration
 from django.db.models import Q
 
-
+# Retrieves a list of all students and renders them to the 'show.html' template
 def show (request):
     student=Student.objects.all()
     return render (request, "crudapp/show.html",{'student':student})
 
 
-
+ # Form for creating or updating student records
 def adddata(request):
     if request.method == "POST":
         fm=StudentRegistration(request.POST)
@@ -21,7 +21,7 @@ def adddata(request):
     return render (request,"crudapp/adddata.html",{'form':fm})
 
 
-
+ # Form for updating student records
 def updatedata(request ,id):
     if request.method=="POST":
         student=Student.objects.get(pk=id)
@@ -34,14 +34,14 @@ def updatedata(request ,id):
         fm=StudentRegistration(instance=student)
     return render (request, "crudapp/update.html",{'form':fm})
 
-
+ # Form for deleting student records
 def deletedata(request ,id):
     if request.method=="POST":
         student=Student.objects.get(pk=id)
         student.delete()
         return HttpResponseRedirect("/")
 
-
+# Retrieves a list of all students accordinng to keyword
 def searchstudent(request):
     if request.method == 'POST':
         n1 = request.POST.get('output')
