@@ -3,7 +3,7 @@
 The student Management System is a web-based platform designed to help educational institutions manage student data efficiently. 
 The system provides functionality for administrators, teachers, and staff to manage student information, including enrollment, grades, and attendance.
 
-##Features
+## Features
 - Student Management: Add, edit, view, and delete student details.
 - Course Registration: Students can be enrolled in courses.
 - Attendance Tracking: Keep records of student attendance.
@@ -18,7 +18,7 @@ The system provides functionality for administrators, teachers, and staff to man
 - **Database:** SQLite (default), can be replaced with PostgreSQL or MySQL
 - **Other Tools:** Bootstrap for responsive UI, Django ORM for database interactions
 
-##Installation
+## Installation
 - Prerequisites
 - Python 3.x
 - Django 3.x or higher
